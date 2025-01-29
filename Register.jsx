@@ -1,33 +1,40 @@
-import * as React from 'react';
-import Radio from '@mui/material/Radio';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import FormControl from '@mui/material/FormControl';
-import FormLabel from '@mui/material/FormLabel';
+import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, TextField } from '@mui/material'
+import React from 'react'
 
 function Register() {
   return (
     <div style={{textAlign:'center'}}>
-        <h1>Register</h1>
-        <FormControl>
-      <FormLabel id="demo-row-radio-buttons-group-label">Gender</FormLabel>
+      <h1 style={{textDecoration:'Underline'}}>Register</h1>
+      <br />
+      <FormControl>
       <RadioGroup
         row
         aria-labelledby="demo-row-radio-buttons-group-label"
         name="row-radio-buttons-group"
       >
-        <FormControlLabel value="personal" control={<Radio />} label="Female" />
-        <FormControlLabel value="company" control={<Radio />} label="Male" />
-        <FormControlLabel value="other" control={<Radio />} label="Other" />
-        <FormControlLabel
-          value="disabled"
-          disabled
-          control={<Radio />}
-          label="other"
-        />
+        <FormControlLabel value="Employee" control={<Radio />} label="Employee" />
+        <FormControlLabel value="Admin" control={<Radio />} label="Admin" />
+        
       </RadioGroup>
     </FormControl>
-
+<br />
+<TextField id="standard-basic" label="Email" variant="outlined" />
+<br /> <br />
+<TextField id="standard-basic" label="Name" variant="outlined" />
+<br /> <br />
+<TextField id="standard-basic" label="Password" variant="outlined" />
+<br /> <br />
+<FormControl>
+      <RadioGroup
+        row
+        aria-labelledby="demo-row-radio-buttons-group-label"
+        name="row-radio-buttons-group"
+      >
+        <FormControlLabel value="female" control={<Radio />} label="Female" />
+        <FormControlLabel value="male" control={<Radio />} label="Male" />
+       
+      </RadioGroup>
+    </FormControl>
     </div>
   )
 }
